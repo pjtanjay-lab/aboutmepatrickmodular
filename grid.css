@@ -1,0 +1,477 @@
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 25px;
+    line-height: 1.6;
+
+    /* FULL PAGE BACKGROUND IMAGE */
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("image/bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* MAIN MODULAR GRID */
+.portfolio {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* ALL MAIN CARDS */
+.card {
+    background: rgba(0, 0, 0, 0.88);
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    padding: 24px;
+    min-width: 0;
+
+    box-shadow:
+        0 0 12px rgba(255, 255, 255, 0.12);
+
+    transition:
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* WHITE GLOW WHEN HOVERING */
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+        0 0 12px rgba(255, 255, 255, 0.25),
+        0 0 25px rgba(255, 255, 255, 0.12);
+}
+
+/* ALL HEADINGS AND TEXT */
+h1,
+h2,
+h3 {
+    color: #ffffff;
+}
+
+p,
+li,
+span {
+    color: #ffffff;
+}
+
+/* PROFILE SECTION */
+.profile {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    align-items: center;
+    gap: 30px;
+
+    /* BLACK PROFILE CARD */
+    background: rgba(0, 0, 0, 0.90);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 290px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.12);
+}
+
+.profile-info h1 {
+    font-size: clamp(26px, 3vw, 38px);
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.profile-info h3 {
+    color: #cccccc;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+/* SMALL PROFILE LABEL */
+.tag {
+    color: #dddddd;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* PROFILE DESCRIPTION */
+.description {
+    color: #dddddd;
+    max-width: 700px;
+    margin-bottom: 22px;
+}
+
+/* PROFILE DETAILS */
+.profile-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+
+    color: #ffffff;
+    font-size: 13px;
+}
+
+/* SECTION HEADINGS */
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.heading-icon {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.section-heading h2 {
+    font-size: 25px;
+    margin-bottom: 3px;
+    color: #ffffff;
+}
+
+.section-heading p {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+/* HOBBIES SECTION */
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.hobby-item {
+    min-width: 0;
+}
+
+.hobby-item img {
+    width: 100%;
+    height: 145px;
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: 8px;
+    margin-bottom: 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.10);
+}
+
+.hobby-item h3 {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.hobby-item p {
+    color: #cccccc;
+    font-size: 13px;
+}
+
+.hobby-item.wide {
+    grid-column: 1 / -1;
+}
+
+.hobby-item.wide img {
+    height: 175px;
+}
+
+/* TECH SKILLS SECTION */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+/* INDIVIDUAL SKILL CARDS */
+.skill {
+    background: rgba(15, 15, 15, 0.95);
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+
+    padding: 15px 6px;
+    text-align: center;
+    min-width: 0;
+
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.10);
+
+    transition: box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    box-shadow:
+        0 0 12px rgba(255, 255, 255, 0.25);
+}
+
+.skill-logo {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 10px;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    border-radius: 8px;
+}
+
+/* KEEP TECHNOLOGY LOGO COLORS */
+.html-logo {
+    background: #e76b3c;
+    color: #ffffff;
+}
+
+.css-logo {
+    background: #287bd5;
+    color: #ffffff;
+}
+
+.js-logo {
+    background: #f0d34a;
+    color: #172536;
+}
+
+.mysql-logo {
+    background: #147a9b;
+    color: #ffffff;
+}
+
+.skill h3 {
+    font-size: 14px;
+    color: #ffffff;
+    overflow-wrap: anywhere;
+}
+
+.skill p {
+    color: #cccccc;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+/* CODING IMAGE */
+.coding-photo {
+    display: block;
+    width: 100%;
+    height: 185px;
+
+    object-fit: cover;
+    border-radius: 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.12);
+}
+
+/* GOALS SECTION */
+.goals {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    align-items: stretch;
+    gap: 18px;
+}
+
+.goal-description {
+    color: #dddddd;
+    margin-bottom: 18px;
+}
+
+/* GOALS LIST */
+.goal-list {
+    list-style: none;
+}
+
+.goal-list li {
+    margin-bottom: 9px;
+    color: #ffffff;
+}
+
+/* GOAL IMAGES */
+.goal-image {
+    min-width: 0;
+    position: relative;
+}
+
+.goal-image img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 230px;
+    max-height: 320px;
+
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.12);
+}
+
+/* TEXT ON GOAL IMAGES */
+.goal-image h3 {
+    position: absolute;
+
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    background: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+    grid-column: 1 / -1;
+
+    text-align: center;
+    color: #ffffff;
+
+    font-size: 13px;
+    padding: 12px;
+}
+
+footer p {
+    color: #cccccc;
+}
+
+/* TABLETS */
+@media (max-width: 850px) {
+    .profile {
+        grid-template-columns: 200px 1fr;
+        gap: 20px;
+    }
+
+    .profile-pic {
+        height: 250px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .goals {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .goal-text {
+        grid-column: 1 / -1;
+    }
+}
+
+/* MOBILE PHONES */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+        background-attachment: scroll;
+    }
+
+    .portfolio {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .card,
+    .profile,
+    .hobbies,
+    .skills,
+    .goals,
+    footer {
+        grid-column: 1;
+    }
+
+    .card {
+        padding: 17px;
+    }
+
+    .profile {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-pic {
+        height: 280px;
+        max-width: 280px;
+    }
+
+    .profile-details {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+
+    .hobby-item img {
+        height: 115px;
+    }
+
+    .hobby-item.wide img {
+        height: 150px;
+    }
+
+    .goals {
+        grid-template-columns: 1fr;
+    }
+
+    .goal-text {
+        grid-column: auto;
+    }
+
+    .goal-image img {
+        height: 220px;
+        min-height: 0;
+    }
+}
